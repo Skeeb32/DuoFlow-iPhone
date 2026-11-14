@@ -4,6 +4,10 @@
 
 DuoFlow for iPhone is the personal command center: an adaptive dashboard for daily priorities, tasks, notes, and a manually activated Stand Mode.
 
+![DuoFlow iPhone app running in the iPhone simulator](docs/screenshots/iphone-dashboard.png)
+
+*Captured from the iPhone simulator. The weather and agenda cards are labeled previews; tasks use local sample data.*
+
 ## Current MVP
 
 - Adaptive dashboard that switches between compact and two-column layouts based on available width

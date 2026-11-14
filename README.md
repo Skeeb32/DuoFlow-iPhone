@@ -2,31 +2,27 @@
 
 **Two screens. One smarter you.**
 
-The iPhone app is DuoFlow's personal command center: an adaptive dashboard for calendar, reminders, notes, projects, and Stand Mode.
+DuoFlow for iPhone is the personal command center: an adaptive dashboard for daily priorities, tasks, notes, and a manually activated Stand Mode.
 
-## Product scope
+## Current MVP
 
-- Home dashboard with clock, date, weather, next event, priorities, and quick capture
-- Adaptive layouts for compact and expanded available space
-- Manually activated Stand Mode with time-aware dashboard profiles
-- Calendar, tasks, projects, notes, and settings
-- Widget customization and accessibility support
-- Companion data exchange with [DuoFlow for watchOS](https://github.com/Skeeb32/DuoFlow-watchOS)
+- Adaptive dashboard that switches between compact and two-column layouts based on available width
+- Manual Stand Mode with clock, agenda preview, and priority tasks
+- Add, complete, and delete tasks; task state persists locally
+- Quick notes and a three-tab Today / Tasks / Notes navigation
+- WatchConnectivity task snapshots and watch-to-phone task completion / quick-note messages
+- Sample agenda and weather are labeled as previews; no live personal data is fabricated
 
-## Technical direction
+## Open and run
 
-- Native Swift and SwiftUI
-- SwiftData for local-first app data where appropriate
-- EventKit and WeatherKit only after clear permission flows
-- WatchConnectivity for nearby iPhone–Watch updates; CloudKit sync is optional
-- WidgetKit and App Intents for supported system integrations
+Open `DuoFlow.xcodeproj` in Xcode and run the `DuoFlow` scheme on an iOS 17 or later simulator or device. Set the development team in Signing & Capabilities for device installation.
 
-Layouts should adapt to the space reported by SwiftUI. Do not assume private fold, hinge, or posture APIs, or show fabricated live personal data.
+To pair the companion app, use the matching bundle identifiers configured in [DuoFlow for watchOS](https://github.com/Skeeb32/DuoFlow-watchOS), sign both apps with the same team, and install them on a paired iPhone and Apple Watch.
 
-## Development status
+## Next
 
-Repository foundation. Implementation and supported deployment targets are to be defined as development begins.
+Connect EventKit and WeatherKit through contextual permission flows, then expand dashboard customization and persistence. Layouts use reported SwiftUI space; they do not depend on private hinge or posture APIs.
 
-## Related repository
+## Companion
 
-- [DuoFlow for watchOS](https://github.com/Skeeb32/DuoFlow-watchOS) — glanceable companion, quick actions, widgets, and complications.
+- [DuoFlow for watchOS](https://github.com/Skeeb32/DuoFlow-watchOS)
